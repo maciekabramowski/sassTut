@@ -1,3 +1,5 @@
+//variables//
+
 $colour : #f00; $width: 200px; $height: 200px;
 
 $stringSelector: element;
@@ -20,4 +22,63 @@ div ##{$stringSelector}{
 
 div .#{$stringSelector}{
   background-color: #fff;
+}
+
+//inheritated selectors//
+
+#parent{
+  background: green;
+
+  #childOne{
+    background: yellow;
+    font-size: 1em;
+  }
+
+  #childTwo{
+    font-weight: 200;
+
+    #innerChild .content {
+      background: blue;
+    }
+  }
+
+  &.hasClass {
+    background: blue;
+  }
+}
+
+//inheritated properties//
+
+%shared {
+  background: green;
+  font-size: 2em;
+}
+
+.content { @extend %shared;}
+
+//
+
+#parent %garett .child {
+  background: blue;
+  font-size: 30px;
+}
+
+.content1 {@extend %garett;}
+
+.content2 {
+  @extend %garett;
+  line-height: 2em;
+}
+
+//
+
+#id %billyKid .child {
+  background: yellow;
+  font-size: 30px;
+}
+
+$list: elementOne, elementTwo, elementThree;
+
+.sign, video, img, #{$list}{
+  @extend %billyKid;
 }
