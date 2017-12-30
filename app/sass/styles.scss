@@ -82,3 +82,118 @@ $list: elementOne, elementTwo, elementThree;
 .sign, video, img, #{$list}{
   @extend %billyKid;
 }
+
+
+//mixins//
+
+@mixin cssProperties {
+  color: blue;
+  background: green;
+  line-height: 1.8;
+}
+
+body {
+  @include cssProperties();
+}
+
+//
+
+@mixin withInheritance {
+  #main{
+    color: blue;
+    background: green;
+    line-height: 1.8;
+  }
+}
+
+div {
+  @include withInheritance();
+}
+
+//
+
+@mixin withArguments($argOne){
+  color: $argOne;
+  background: green;
+  line-height: 1.8;
+}
+
+div.arguments {
+  @include withArguments(green);
+}
+
+//
+
+$colorVar: brown;
+
+@mixin withArgumentsFromVariable($arg){
+  color: $arg;
+}
+
+div.argVar {
+  @include withArgumentsFromVariable($colorVar);
+}
+
+//
+
+@mixin withMultArguments($argOne, $argTwo){
+  color: $argOne;
+  background: $argTwo;
+  line-height: 1.8;
+}
+
+div.multarguments {
+  @include withMultArguments(green, blue);
+}
+
+//
+
+@mixin boxShadow($shadow){
+ -webkit-box-shadow: $shadow;
+ -moz-box-shadow: $shadow;
+ -o-box-shadow:$shadow;
+  box-shadow: $shadow;
+}
+
+div.boxshadow {
+  @include boxShadow(grey);
+}
+
+//
+@mixin boxShadowMult($shadow...){
+ -webkit-box-shadow: $shadow;
+ -moz-box-shadow: $shadow;
+ -o-box-shadow:$shadow;
+  box-shadow: $shadow;
+}
+
+div.boxshadow {
+  @include boxShadowMult(grey, blue);
+}
+
+//
+
+@mixin keyframes($name){
+  @-webkit-keyframes #{$name}{
+@content;
+  }
+
+  @-moz-keyframes #{$name}{
+@content;
+  }
+
+  @-o-keyframes #{$name}{
+@content;
+  }
+
+  @keyframes #{$name}{
+@content;
+  }
+}
+
+@include keyframes(myAnim){
+  0% {opacity:0}
+  100% {opacity:1}
+};
+
+//

@@ -55,3 +55,81 @@ div .element {
   background: yellow;
   font-size: 30px;
 }
+
+body {
+  color: blue;
+  background: green;
+  line-height: 1.8;
+}
+
+div #main {
+  color: blue;
+  background: green;
+  line-height: 1.8;
+}
+
+div.arguments {
+  color: green;
+  background: green;
+  line-height: 1.8;
+}
+
+div.argVar {
+  color: brown;
+}
+
+div.multarguments {
+  color: green;
+  background: blue;
+  line-height: 1.8;
+}
+
+div.boxshadow {
+  -webkit-box-shadow: grey;
+  -moz-box-shadow: grey;
+  -o-box-shadow: grey;
+  box-shadow: grey;
+}
+
+div.boxshadow {
+  -webkit-box-shadow: grey, blue;
+  -moz-box-shadow: grey, blue;
+  -o-box-shadow: grey, blue;
+  box-shadow: grey, blue;
+}
+
+@-webkit-keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
