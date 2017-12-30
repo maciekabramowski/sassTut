@@ -1,0 +1,23 @@
+$colour : #f00; $width: 200px; $height: 200px;
+
+$stringSelector: element;
+
+$list: 1px 1px 3px black, 3px 3px 4px #ccc;
+
+div {
+  background-color: $colour;
+  width: $width;
+  height: $height;
+}
+
+div #{$stringSelector}{
+  background-color: #fff;
+}
+
+div ##{$stringSelector}{
+  background-color: #fff;
+}
+
+div .#{$stringSelector}{
+  background-color: #fff;
+}
