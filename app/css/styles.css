@@ -133,3 +133,49 @@ div.boxshadow {
     opacity: 1;
   }
 }
+
+.div1 {
+  background: 3;
+  font-size: 4;
+}
+
+.div2 {
+  background: 6px 7px 8px blue;
+  height: 2px;
+}
+
+.div3 {
+  background: 1px 2px 3px green, 1em 2em 3em black, 3px 2px 1px yellow;
+}
+
+.div4 {
+  background: comma;
+}
+
+.div5 {
+  background: 1px 2px 3px black 1px 2px 3px green 6px 7px 8px blue 3px 2px 1px yellow;
+}
+
+.div6 {
+  background: 1px 2px 3px black, 1px 2px 3px green, 6px 7px 8px blue, 3px 2px 1px yellow;
+}
+
+.div7 {
+  background: Helvetica Arial sans-serif "opensans";
+}
+
+.div8 {
+  background: Helvetica, Arial, sans-serif, "opensans";
+}
+
+.div9 {
+  background: 2;
+}
+
+.div10 {
+  background: 1px 4em black, 2px 3em green, 3px 2em blue, 4px 1em red;
+}
+
+.div11 {
+  background: 1px 4em black, 2px 3em green, 3px 2em blue, 4px 1em red;
+}

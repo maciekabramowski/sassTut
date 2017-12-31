@@ -196,4 +196,64 @@ div.boxshadow {
   100% {opacity:1}
 };
 
-//
+// list functions//
+$list1: 200px;
+$list2: 1px 2px 3px black;
+$list2comma: 1px 2px 3px black,;
+$list3: Helvetica, Arial, sans-serif;
+
+$nestedList: 1px 2px 3px green, 6px 7px 8px blue, 3px 2px 1px yellow;
+
+$zip1:1px 2px 3px 4px;
+$zip2:4em 3em 2em 1em;
+$zip3: black green blue red;
+
+.div1{
+  background: length($list3);
+  font-size: length($list2);
+}
+
+.div2{
+  background: nth($nestedList, 2);
+  height: nth($list2, 2);
+}
+
+.div3 {
+  background: set-nth($nestedList, 2, 1em 2em 3em black);
+}
+
+.div4{
+  background: list-separator($list3);
+}
+
+.div5{
+  background: join($list2, $nestedList);
+}
+
+.div6{
+  background: join($list2comma, $nestedList, comma);
+}
+
+.div7{
+  background: join($list3, 'opensans', space);
+}
+
+.div8{
+  background: append($list3, 'opensans');
+}
+
+.div9{
+  background: index($list3, Arial);
+}
+
+.div10{
+  background: zip(
+  1px 2px 3px 4px,
+  4em 3em 2em 1em,
+  black green blue red
+  );
+}
+
+.div11{
+  background: zip($zip1, $zip2, $zip3);
+}
