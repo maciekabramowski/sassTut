@@ -179,3 +179,12 @@ div.boxshadow {
 .div11 {
   background: 1px 4em black, 2px 3em green, 3px 2em blue, 4px 1em red;
 }
+
+.foo {
+  content: "KeyName", "AnotherKey";
+  content: "Value", 200px;
+  content: true;
+  content: "targeting a key produces it's value";
+  content: ("KeyName": "Value", "AnotherKey": 200px, "key1": "value1", "key2": "value2", "key3": "value3");
+  content: ("key3": "value3");
+}
